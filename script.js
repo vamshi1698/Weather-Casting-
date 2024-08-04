@@ -22,7 +22,7 @@ fetch(`${IPURL}`)
         userCity.innerText = weatherData.location.name;
         userCText.innerText = weatherData.current.condition.text;
         userIcon.src = weatherData.current.condition.icon;
-        userCelsius.innerText = weatherData.current.temp_c;
+        userCelsius.innerText = Math.ceil(weatherData.current.temp_c);
         userTime.innerText = weatherData.location.localtime.split(" ")[1];
         userDate.innerText = weatherData.location.localtime.split(" ")[0];
         const day = new Date();
